@@ -37,7 +37,7 @@ defmodule TailwindsWeb.Router do
 
     scope "/" do
       pipe_through :browser
-      live_dashboard "/dashboard", metrics: TailwindsWeb.Telemetry
+      live_dashboard "/dashboard", metrics: TailwindsWeb.Telemetry, ecto_repos: [Tailwinds.Repo]
     end
   end
 end
