@@ -19,8 +19,15 @@ defmodule TailwindsWeb.Router do
 
     live "/", PageLive, :index
     live "/hello/live", HelloLive, :index
+
     get "/hello", HelloController, :index
     get "/hello/:messenger", HelloController, :show
+  end
+
+  scope "/api/v1", TailwindsWeb do
+    pipe_through :api
+    
+    get "/hello", ApiController, :hello
   end
 
   # Other scopes may use custom stacks.
