@@ -18,6 +18,9 @@ defmodule TailwindsWeb.Router do
     pipe_through :browser
 
     live "/", PageLive, :index
+    live "/hello/live", HelloLive, :index
+    get "/hello", HelloController, :index
+    get "/hello/:messenger", HelloController, :show
   end
 
   # Other scopes may use custom stacks.
