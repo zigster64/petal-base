@@ -8,4 +8,9 @@ defmodule TailwindsWeb.HelloController do
   def show(conn, %{"messenger" => messenger}) do
     render(conn, "show.html", messenger: messenger)
   end
+
+  def show(conn, _params) do
+    page = %{title: "foo"}
+    render(conn, "show.json", page: page)
+  end
 end

@@ -19,8 +19,8 @@ defmodule TailwindsWeb.HelloLive do
     <div class="phx-hero">
      <h1>Hello Live View</h1>
       <h4>The count is: <%= @val %></h4>
-      <button class="bg-blue-500 hover:bg-blue-700 py-10 px-5 rounded font-bold text-white" phx-click="inc">+</button>
-      <button class="bg-red-500 hover:bg-red-700 py-10 px-5 rounded font-bold text-white" phx-click="dec">-</button>
+      <button class="bg-red-500 hover:bg-red-700 py-10 px-5 rounded font-bold text-white" phx-click="dec"><<</button>
+      <button class="bg-blue-500 hover:bg-blue-700 py-10 px-5 rounded font-bold text-white" phx-click="inc">>></button>
     </div>
     """
   end
